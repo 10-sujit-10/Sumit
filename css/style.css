@@ -272,7 +272,7 @@ footer .list::after {
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 360px) {
   header .nav-container .list .items a {
     font-size: 12px;
     padding-right: 0;
