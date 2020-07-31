@@ -1,0 +1,289 @@
+:root {
+  --light-color: #fff;
+  --primary-color: #d7416d;
+  --dark-color: #252525;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::selection {
+  background: var(--dark-color);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Pacifico', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* Navigation Menu */
+
+header {
+  z-index: 10;
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: var(--primary-color);
+  height: 13vh;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+header .nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1250px;
+  margin: 0 auto;
+  padding: 15px;
+  height: 100%;
+}
+
+header .nav-container .list {
+  display: flex;
+  justify-content: space-between;
+}
+
+header .nav-container .list .items a {
+  padding: 20px;
+  color: var(--light-color);
+}
+
+@media (max-width: 1250px) {
+  header .nav-container {
+    width: 95%;
+  }
+}
+
+/* Home Section */
+#home {
+  height: 87vh;
+}
+
+#home .container {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+/* home part-1 section */
+
+#home .container .part1 {
+  display: flex;
+  flex: 1;
+  padding: 5rem 0 0 0;
+}
+
+#home .container .part1 .circle {
+  width: 30rem;
+  height: 30rem;
+  background: var(--primary-color);
+  border-radius: 50%;
+  text-align: center;
+  border: 5px dotted var(--dark-color);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5),
+    inset 0 0 30px rgba(0, 0, 0, 0.3);
+  color: var(--light-color);
+  display: flex;
+  align-items: center;
+  font-size: 3rem;
+  padding: 7.8rem;
+}
+
+/* home part-2 section */
+
+#home .container .part2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  z-index: -5;
+}
+
+#home .container .part2 img {
+  width: 100%;
+}
+
+/* Works Section */
+
+#works .container {
+  width: 1200px;
+  margin: 0 auto;
+  background: linear-gradient(180deg, var(--light-color), #e9e8e8);
+  padding: 50px;
+  border-radius: 7px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3), 0 0 60px rgba(0, 0, 0, 0.3);
+}
+
+#works .container .heading {
+  text-align: center;
+}
+
+#works .container .heading h1 {
+  font-size: 2rem;
+  color: var(--dark-color);
+  border-left: 10px dotted var(--primary-color);
+  border-right: 10px dotted var(--primary-color);
+}
+
+#works .container .heading h1 > span {
+  color: var(--primary-color);
+}
+
+#works .gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 20px;
+  margin: 1rem 0;
+}
+
+#works .gallery img {
+  height: 370px;
+  margin: 30px;
+  border: 1px solid var(--dark-color);
+  box-shadow: 0 0 23px rgba(0, 0, 0, 0.3);
+}
+
+/* Section footer */
+
+footer {
+  display: flex;
+  margin: 2rem 0 0 0;
+  background: var(--primary-color);
+  padding: 2rem;
+  height: 20vh;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5), 0 0 60px rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+}
+
+footer .list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+footer .list .items a {
+  padding: 15px;
+  color: var(--light-color);
+}
+
+footer .list::after {
+  content: 'Copyright 2020 by Sumit Singha Roy';
+  font-size: 10px;
+  color: var(--light-color);
+  position: absolute;
+  bottom: -2rem;
+  font-family: sans-serif;
+}
+
+/* Media */
+
+@media (max-width: 1200px) {
+  #home .container {
+    width: 95%;
+  }
+  #works .container {
+    width: 95%;
+  }
+}
+
+@media (max-width: 1024px) {
+  #home {
+    height: 80vh;
+  }
+  #home .container .part1 {
+    align-items: center;
+    justify-content: center;
+  }
+
+  #home .container .part1 .circle {
+    width: 20rem;
+    height: 20rem;
+    padding: 3rem;
+    margin: 5rem 0 0 0;
+  }
+
+  #home .container .part2 img {
+    width: 25rem;
+    position: absolute;
+    bottom: -5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #home .container {
+    flex-direction: column;
+  }
+
+  #home .container .part1 {
+    display: none;
+  }
+
+  #home .container .part2::before {
+    content: "I'm Sumit";
+    position: absolute;
+    top: 7rem;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+  }
+}
+
+@media (max-width: 520px) {
+  header .nav-container .logo img {
+    width: 7rem;
+  }
+
+  header .nav-container .list .items a {
+    padding: 9px;
+    font-size: 14px;
+  }
+
+  #home .container .part2::before {
+    top: 9rem;
+  }
+
+  #works .gallery img {
+    height: 15rem;
+  }
+}
+
+@media (max-width: 425px) {
+  #home .container .part2 img {
+    width: 19rem;
+    bottom: 0;
+  }
+}
+
+@media (max-width: 320px) {
+  header .nav-container .list .items a {
+    font-size: 12px;
+    padding-right: 0;
+  }
+
+  #works .gallery img {
+    height: 14rem;
+  }
+
+  #works .gallery img:nth-child(12),
+  #works .gallery img:nth-child(23) {
+    height: 12rem;
+  }
+}
