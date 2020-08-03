@@ -268,7 +268,7 @@ footer .list::after {
 @media (max-width: 425px) {
   #home .container .part2 img {
     width: 19rem;
-    bottom: -3rem;
+    bottom: -4rem;
   }
 }
 
