@@ -239,7 +239,7 @@ footer .list::after {
   #home .container .part2::before {
     content: "I'm Sumit";
     position: absolute;
-    top: 6rem;
+    top: 4rem;
     font-size: 2.5rem;
     color: var(--primary-color);
     text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
